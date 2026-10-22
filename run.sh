@@ -5,6 +5,7 @@
 #   ./run.sh --dev     run API (:8000) + Vite dev server with hot reload (:5173)
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
+PORT="${PORT:-8000}"
 BACKEND="$ROOT/backend"
 FRONTEND="$ROOT/frontend"
 PY="$BACKEND/.venv/bin/python"
@@ -26,8 +27,9 @@ if ! command -v tesseract >/dev/null 2>&1 && [ ! -x "$HOME/.local/bin/tesseract"
   echo "  Install: sudo pacman -S tesseract tesseract-data-eng | sudo apt install tesseract-ocr | brew install tesseract"
 fi
 
-if [[ " $* " == *" --reset "* ]] || [ ! -f "$BACKEND/data/verifyai.db" ]; then
-  echo "→ Resetting database to the demo state"
+# Seed on --reset, or whenever the database has no users (first run, or an earlier run that stopped part-way).
+if [[ " $* " == *" --reset "* ]] || ! (cd "$BACKEND" && "$PY" -m scripts.has_users); then
+  echo "→ Setting up the database with the demo data"
   (cd "$BACKEND" && "$PY" -m scripts.reset_demo)
 fi
 
@@ -40,6 +42,6 @@ if [[ " $* " == *" --dev "* ]]; then
 else
   echo "→ Building frontend"
   (cd "$FRONTEND" && npm run build --silent >/dev/null)
-  echo "→ AICTE VerifyAI running at http://127.0.0.1:8000  (Ctrl+C to stop)"
-  cd "$BACKEND" && exec "$PY" -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+  echo "→ AICTE VerifyAI running at http://127.0.0.1:$PORT  (Ctrl+C to stop)"
+  cd "$BACKEND" && exec "$PY" -m uvicorn app.main:app --host 127.0.0.1 --port "$PORT"
 fi
