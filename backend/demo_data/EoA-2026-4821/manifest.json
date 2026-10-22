@@ -1,0 +1,92 @@
+[
+  {
+    "filename": "affidavit_scanned.pdf",
+    "declared_type": "AFFIDAVIT",
+    "expected_type": "AFFIDAVIT",
+    "expected_fields": {
+      "reference_number": "AFF20261192",
+      "issue_date": "2026-09-15",
+      "aicte_id": "12345678901"
+    }
+  },
+  {
+    "filename": "undertaking.pdf",
+    "declared_type": "UNDERTAKING",
+    "expected_type": "UNDERTAKING",
+    "expected_fields": {
+      "reference_number": "UND20260417",
+      "issue_date": "2026-09-16"
+    }
+  },
+  {
+    "filename": "noc.pdf",
+    "declared_type": "NOC",
+    "expected_type": "NOC",
+    "expected_fields": {
+      "reference_number": "NOC28492",
+      "issue_date": "2026-03-12",
+      "expiry_date": "2026-11-09"
+    }
+  },
+  {
+    "filename": "accreditation.pdf",
+    "declared_type": "ACCREDITATION",
+    "expected_type": "ACCREDITATION",
+    "expected_fields": {
+      "reference_number": "NABAC4821",
+      "valid_from": "2023-07-01",
+      "expiry_date": "2026-06-30"
+    }
+  },
+  {
+    "filename": "previous_eoa.pdf",
+    "declared_type": "PREVIOUS_EOA",
+    "expected_type": "PREVIOUS_EOA",
+    "expected_fields": {
+      "reference_number": "EOA2025260081ABC",
+      "issue_date": "2025-11-18",
+      "intake:btech computer science and engineering": "180"
+    }
+  },
+  {
+    "filename": "programme_details.pdf",
+    "declared_type": "PROGRAMME_DETAILS",
+    "expected_type": "PROGRAMME_DETAILS",
+    "expected_fields": {
+      "intake:btech computer science and engineering": "240",
+      "intake:mba": "60"
+    }
+  },
+  {
+    "filename": "fee_receipt.pdf",
+    "declared_type": "FEE_RECEIPT",
+    "expected_type": "FEE_RECEIPT",
+    "expected_fields": {
+      "reference_number": "TXN2026778134",
+      "amount": "150000",
+      "issue_date": "2026-10-05"
+    }
+  },
+  {
+    "filename": "infrastructure_certificate.pdf",
+    "declared_type": "INFRA_CERT",
+    "expected_type": "INFRA_CERT",
+    "expected_fields": {
+      "reference_number": "BCCNGP5531",
+      "built_up_area": "5400",
+      "issue_date": "2026-03-05"
+    }
+  },
+  {
+    "filename": "campus_photo_1.jpg",
+    "declared_type": "INFRA_PHOTOS",
+    "expected_type": "INFRA_PHOTOS",
+    "expected_fields": {}
+  },
+  {
+    "filename": "lab_photo_2.jpg",
+    "declared_type": "INFRA_PHOTOS",
+    "expected_type": "INFRA_PHOTOS",
+    "expected_fields": {}
+  }
+]

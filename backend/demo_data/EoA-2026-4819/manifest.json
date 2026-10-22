@@ -1,0 +1,56 @@
+[
+  {
+    "filename": "affidavit.pdf",
+    "declared_type": "AFFIDAVIT",
+    "expected_type": "AFFIDAVIT",
+    "expected_fields": {}
+  },
+  {
+    "filename": "undertaking.pdf",
+    "declared_type": "UNDERTAKING",
+    "expected_type": "UNDERTAKING",
+    "expected_fields": {}
+  },
+  {
+    "filename": "previous_eoa.pdf",
+    "declared_type": "PREVIOUS_EOA",
+    "expected_type": "PREVIOUS_EOA",
+    "expected_fields": {}
+  },
+  {
+    "filename": "programme_details.pdf",
+    "declared_type": "PROGRAMME_DETAILS",
+    "expected_type": "PROGRAMME_DETAILS",
+    "expected_fields": {}
+  },
+  {
+    "filename": "fee_receipt.pdf",
+    "declared_type": "FEE_RECEIPT",
+    "expected_type": "FEE_RECEIPT",
+    "expected_fields": {}
+  },
+  {
+    "filename": "infrastructure_certificate.pdf",
+    "declared_type": "INFRA_CERT",
+    "expected_type": "INFRA_CERT",
+    "expected_fields": {}
+  },
+  {
+    "filename": "floor_plan.pdf",
+    "declared_type": "FLOOR_PLAN",
+    "expected_type": "FLOOR_PLAN",
+    "expected_fields": {}
+  },
+  {
+    "filename": "campus_photo.jpg",
+    "declared_type": "INFRA_PHOTOS",
+    "expected_type": "INFRA_PHOTOS",
+    "expected_fields": {}
+  },
+  {
+    "filename": "classroom_photo.jpg",
+    "declared_type": "INFRA_PHOTOS",
+    "expected_type": "INFRA_PHOTOS",
+    "expected_fields": {}
+  }
+]

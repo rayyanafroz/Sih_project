@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "floor_plan.pdf",
+    "declared_type": "FLOOR_PLAN",
+    "expected_type": "FLOOR_PLAN",
+    "expected_fields": {}
+  },
+  {
+    "filename": "accreditation_renewed.pdf",
+    "declared_type": "ACCREDITATION",
+    "expected_type": "ACCREDITATION",
+    "expected_fields": {
+      "reference_number": "NABAC5120",
+      "expiry_date": "2029-10-14"
+    }
+  }
+]
