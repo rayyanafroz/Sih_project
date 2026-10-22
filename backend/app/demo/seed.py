@@ -142,3 +142,23 @@ def reset(generate_documents: bool = True, quiet: bool = False) -> None:
     finally:
         db.close()
         settings.step_delay = saved_delay
+
+
+def ensure_seeded() -> bool:
+    """Create the demo data if the database has no users (first start, or an earlier start that stopped part-way).
+
+    Runs when the server starts, so every way of launching the app ends up with working demo accounts.
+    Returns True if it seeded. Disabled when demo mode is off.
+    """
+    if not settings.demo_mode:
+        return False
+    db = SessionLocal()
+    try:
+        if db.query(User).first() is not None:
+            return False
+    finally:
+        db.close()
+    print("No users found: setting up the demo data (first start only, about 15 seconds)...", flush=True)
+    reset(generate_documents=False, quiet=True)
+    print("Demo data ready. Sign in with scrutiny@verifyai.demo / demo1234", flush=True)
+    return True

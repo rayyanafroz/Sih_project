@@ -7,6 +7,7 @@ from fastapi.responses import FileResponse
 from . import models  # noqa: F401  (register tables)
 from .config import settings
 from .db import Base, engine
+from .demo.seed import ensure_seeded
 from .routers import applications, audit, auth, dashboard, documents, findings, meta, rules, verification
 from .services.prescrutiny import fail_stale_runs
 
@@ -17,6 +18,7 @@ API = "/api/v1"
 async def lifespan(_app: FastAPI):
     Base.metadata.create_all(engine)
     settings.storage_dir.mkdir(parents=True, exist_ok=True)
+    ensure_seeded()
     fail_stale_runs()
     yield
 
